@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Morsel POS – Coming Soon</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #61cb21, #039830);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 520px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .logo {
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .logo span {
+            color: #eaffea;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .headline {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 35px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .time-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 14px;
+            padding: 15px 10px;
+        }
+
+        .time-box h2 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .time-box p {
+            font-size: 12px;
+            letter-spacing: 1px;
+            opacity: 0.85;
+        }
+
+        .footer {
+            font-size: 13px;
+            opacity: 0.85;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .headline {
+                font-size: 22px;
+            }
+
+            .countdown {
+                gap: 10px;
+            }
+
+            .time-box h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+       <img src="logo.png" alt="Logo" class="logo" style="width: 250px; height: auto;" />
+        <div class="subtitle">Restaurant POS</div>
+
+        <div class="headline">We’re Cooking Something Amazing</div>
+        <p class="description">
+            A modern, fast, and intuitive POS system built specifically for restaurants.
+            Manage orders, billing, inventory, and insights — all in one place.
+        </p>
+
+        <div class="countdown">
+            <div class="time-box">
+                <h2 id="days">00</h2>
+                <p>DAYS</p>
+            </div>
+            <div class="time-box">
+                <h2 id="hours">00</h2>
+                <p>HOURS</p>
+            </div>
+            <div class="time-box">
+                <h2 id="minutes">00</h2>
+                <p>MINUTES</p>
+            </div>
+            <div class="time-box">
+                <h2 id="seconds">00</h2>
+                <p>SECONDS</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2025 TAKINEX • Morsel Restaurant POS • Coming Soon
+        </div>
+    </div>
+
+    <script>
+        // 🔧 SET YOUR LAUNCH DATE HERE
+        const launchDate = new Date("2026-05-01T00:00:00").getTime();
+
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.querySelector('.countdown').innerHTML = "<h2>We Are Live!</h2>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
+
+</body>
+</html>
