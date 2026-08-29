@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+    <title>Morsel Restaurant POS</title>
+     
+    <!-- ======= Google Font =======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+    <!-- End Google Font-->
+    
+    <!-- ======= Styles =======-->
+    <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+    <!-- End Styles-->
+    
+    <!-- ======= Theme Style =======-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- End Theme Style-->
+    
+    <!-- ======= Apply theme =======-->
+    <script>
+      // Apply the theme as early as possible to avoid flicker
+      (function() {
+      const storedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-bs-theme', storedTheme);
+      })();
+    </script>
+  </head>
+  <body>
+    
+    
+    <!-- ======= Site Wrap =======-->
+    <div class="site-wrap">
+      
+      
+      <!-- ======= Header =======-->
+      <header class="fbs__net-navbar navbar navbar-expand-lg dark" aria-label="freebootstrap.net navbar">
+        <div class="container d-flex align-items-center justify-content-between">
+          
+          
+          <!-- Start Logo-->
+          <a class="navbar-brand w-auto" href="index.html">
+            <!-- If you use a text logo, uncomment this if it is commented-->
+            <!-- Vertex--> 
+            
+            <!-- If you plan to use an image logo, uncomment this if it is commented-->
+            
+            <!-- logo dark--><img class="logo dark img-fluid" src="assets/images/logo.png" alt="morsel image placeholder"> 
+            
+            <!-- logo light--><img class="logo light img-fluid" src="assets/images/logo.png" alt="morsel image placeholder">
+            
+            </a>
+          <!-- End Logo-->
+          
+          <!-- Start offcanvas-->
+          <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1" aria-labelledby="fbs__net-navbarsLabel">
+            
+            
+            <div class="offcanvas-header">
+              <div class="offcanvas-header-logo">
+                <!-- If you use a text logo, uncomment this if it is commented-->
+                
+                <!-- h5#fbs__net-navbarsLabel.offcanvas-title Vertex-->
+                
+                <!-- If you plan to use an image logo, uncomment this if it is commented-->
+                <a class="logo-link" id="fbs__net-navbarsLabel" href="index.html">
+                  
+                  
+                  <!-- logo dark--><img class="logo dark img-fluid" src="assets/images/logo.png" alt="morsel image placeholder"> 
+                  
+                  <!-- logo light--><img class="logo light img-fluid" src="assets/images/logo.png" alt="morsel image placeholder"></a>
+                
+              </div>
+              <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <div class="offcanvas-body align-items-lg-center">
+              
+              
+              <ul class="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link scroll-link active" aria-current="page" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#how-it-works">How It Works</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#services">Restaurant Types</a></li>
+				<li class="nav-item"><a class="nav-link scroll-link" href="#testimonials">Testimonials</a></li>
+				<li class="nav-item"><a class="nav-link scroll-link" href="#faq">FAQ</a></li>
+               
+               
+              </ul>
+              
+            </div>
+          </div>
+          <!-- End offcanvas-->
+          
+          <div class="ms-auto w-auto">
+            
+            
+            <div class="header-social d-flex align-items-center gap-1"><a class="btn btn-primary py-2" href="https://play.google.com/store/apps/details?id=com.takinex.morsel">Get Started</a>
+              
+              <button class="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto" data-bs-toggle="offcanvas" data-bs-target="#fbs__net-navbars" aria-controls="fbs__net-navbars" aria-label="Toggle navigation" aria-expanded="false">
+                <svg class="fbs__net-icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="21" x2="3" y1="6" y2="6"></line>
+                  <line x1="15" x2="3" y1="12" y2="12"></line>
+                  <line x1="17" x2="3" y1="18" y2="18"></line>
+                </svg>
+                <svg class="fbs__net-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+              </button>
+              
+            </div>
+            
+          </div>
+        </div>
+      </header>
+      <!-- End Header-->
+      
+      <!-- ======= Main =======-->
+      <main>
+        
+        
+        <!-- ======= Hero =======-->
+        <section class="hero__v6 section" id="home">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="row">
+                  <div class="col-lg-11"><span class="hero-subtitle text-uppercase" data-aos="fade-up" data-aos-delay="0">BUILT FOR MODERN RESTAURANTS</span>
+                    <h1 class="hero-title mb-3" data-aos="fade-up" data-aos-delay="100">Powerful Restaurant POS, Made Simple.</h1>
+                    <p class="hero-description mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">Morsel brings billing, KOT, orders, tables, printers, inventory, and reports together in one simple POS built for modern restaurants.</p>
+                    <div class="cta d-flex gap-2 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="300"><a class="btn" href="https://play.google.com/store/apps/details?id=com.takinex.morsel">Download Now</a><a class="btn btn-white-outline" href="#">Watch Demo 
+                        <svg class="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M7 7h10v10"></path>
+                          <path d="M7 17 17 7"></path>
+                        </svg></a></div>
+                    <div class="logos mb-4" data-aos="fade-up" data-aos-delay="400"><span class="logos-title text-uppercase mb-4 d-block">NOW AVAILABLE</span>
+                      <div class="logos-images d-flex gap-4 align-items-center"><img class="img-fluid js-img-to-inline-svg" src="assets/images/logo/logo_android_phone.png" alt="Platform 1" style="width: 200px;"><img class="img-fluid js-img-to-inline-svg" src="assets/images/logo/logo_android_tablet.png" alt="Platform 1" style="width: 200px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="hero-img"><img class="img-card img-fluid" src="assets/images/card-expenses.png" alt="Image card" data-aos="fade-down" data-aos-delay="600"><img class="img-main img-fluid rounded-4" src="assets/images/hero_section.jpg" alt="Hero Image" data-aos="fade-in" data-aos-delay="500"></div>
+              </div>
+            </div>
+          </div>
+          <!-- End Hero-->
+        </section>
+        <!-- End Hero-->
+        
+        <!-- ======= About =======-->
+        <section class="about__v4 section" id="about">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 order-md-2">
+                <div class="row justify-content-end">
+                  <div class="col-md-11 mb-4 mb-md-0"><span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">About Morsel</span>
+                    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="100">Everything Your Restaurant Needs. In One POS.</h2>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                      <p>Morsel is a simple, powerful restaurant management system designed to make everyday operations faster and easier.</p>
+                      <p>From taking orders and managing tables to printing KOTs, processing bills, tracking sales, and managing printers, Morsel brings your essential restaurant operations together in one reliable system.</p>
+                    </div>
+                    <h4 class="small fw-bold mt-4 mb-3" data-aos="fade-up" data-aos-delay="300">Key Features</h4>
+                    <ul class="d-flex flex-row flex-wrap list-unstyled gap-3 features" data-aos="fade-up" data-aos-delay="400">
+                      <li class="d-flex align-items-center gap-2"><span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span><span class="text">Fast & Easy Billing</span></li>
+                      <li class="d-flex align-items-center gap-2"><span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span><span class="text">Table & Order Management</span></li>
+                      <li class="d-flex align-items-center gap-2"><span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span><span class="text">KOT Management</span></li>
+                      <li class="d-flex align-items-center gap-2"><span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span><span class="text">Cloud Backup</span></li>
+                      <li class="d-flex align-items-center gap-2"><span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span><span class="text">Works Offline</span></li>
+					  <li class="d-flex align-items-center gap-2"><span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span><span class="text">Inventory Management</span></li>
+					  <li class="d-flex align-items-center gap-2"><span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span><span class="text">Sales & Reports</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6"> 
+                <div class="img-wrap position-relative"><img class="img-fluid rounded-4" src="assets/images/about.jpg" alt="morsel image placeholder" data-aos="fade-up" data-aos-delay="0">
+                  <div class="mission-statement p-4 rounded-4 d-flex gap-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-icon text-center rounded-circle"><i class="bi bi-lightbulb fs-4"></i></div>
+                    <div>
+                      <h3 class="text-uppercase fw-bold">Your Restaurant, Always Ready</h3>
+                      <p class="fs-5 mb-0">Morsel works offline, so you can continue taking orders, managing tables, and billing even when the internet is unavailable.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End About-->
+        
+        <!-- ======= Features =======-->
+        <section class="section features__v2" id="features">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-lg-flex p-5 rounded-4 content" data-aos="fade-in" data-aos-delay="0">
+                  <div class="row">
+                    <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+                      <div class="row"> 
+                        <div class="col-lg-11">
+                          <div class="h-100 flex-column justify-content-between d-flex">
+                            <div>
+                              <h2 class="mb-4">Why Choose us</h2>
+                              <p class="mb-5">Everything you need to run your restaurant smoothly — simple, reliable, and built for everyday operations. From billing and order management to KOTs, tables, printers, inventory, and reports, Morsel brings everything together in one powerful and easy-to-use POS system.</p>
+                            </div>
+                            <div class="align-self-start"><a class="glightbox btn btn-play d-inline-flex align-items-center gap-2" href="https://www.youtube.com" data-gallery="video"><i class="bi bi-play-fill"></i> Watch Demo</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <div class="row justify-content-end">
+                        <div class="col-lg-11">
+                          <div class="row">
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="0">
+                              <div class="icon text-center mb-4"><i class="bi bi-person-check fs-4"></i></div>
+                              <h3 class="fs-6 fw-bold mb-3">Simple & User-Friendly</h3>
+                              <p>An intuitive interface designed to help your team take orders, manage tables, and complete billing with minimal training.</p>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="icon text-center mb-4"><i class="bi bi-graph-up fs-4"></i></div>
+                              <h3 class="fs-6 fw-bold mb-3">Powerful Financial Insights</h3>
+                              <p>Get clear sales reports and financial insights to understand revenue, orders, payments, and overall restaurant performance.</p>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                              <div class="icon text-center mb-4"><i class="bi bi-headset fs-4"></i></div>
+                              <h3 class="fs-6 fw-bold mb-3">Customer Support</h3>
+                              <p>Get reliable assistance through email whenever you need help with Morsel or have questions about your restaurant operations.</p>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                              <div class="icon text-center mb-4"><i class="bi bi-shield-lock fs-4"></i></div>
+                              <h3 class="fs-6 fw-bold mb-3">Secure & Reliable</h3>
+                              <p>Built with security in mind to help protect your restaurant data and keep your business information safe and reliable.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Features-->
+        
+        <!-- ======= Pricing =======-->
+        <section class="section pricing__v2" id="pricing">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-md-5 mx-auto text-center"><span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Pricing</span>
+                <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">Powerful POS. Simple Pricing.</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Get all the essential tools you need to manage orders, billing, KOTs, tables, printers, reports, and more — with simple pricing and no unnecessary complexity.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-5 rounded-4 price-table h-100">
+                  <h3>Monthly Plan</h3>
+                  <p>Enjoy all essential Morsel POS features with a simple monthly subscription. Perfect for restaurants that prefer flexibility without a long-term commitment.</p>
+                  <div class="price mb-4"><strong>$1.88</strong><span>/ month</span></div>
+                  <div><a class="btn" href="https://play.google.com/store/apps/details?id=com.takinex.morsel">Get Started</a></div>
+                </div>
+              </div>
+              <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+                <div class="p-5 rounded-4 price-table popular h-100">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3 class="mb-3">Yearly Plan</h3>
+                      <p>Get everything in the Monthly Plan at a lower effective cost, with 35% savings when you choose annual billing. Great for restaurants looking for long-term value.</p>
+                      <div class="price mb-4"><strong class="me-1">$14.66</strong><span>/ year</span></div>
+                      <div><a class="btn btn-white hover-outline" href="https://play.google.com/store/apps/details?id=com.takinex.morsel">Get Started</a></div>
+                    </div>
+                    <div class="col-md-6 pricing-features">
+                      <h4 class="text-uppercase fw-bold mb-3">Features</h4>
+                      <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li class="d-flex gap-2 align-items-start mb-0"><span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span><span>Unlimited Orders</span></li>
+                        <li class="d-flex gap-2 align-items-start mb-0"><span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span><span>Advanced Reports</span></li>
+                        <li class="d-flex gap-2 align-items-start mb-0"><span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span><span>Ad-Free Experience</span></li>
+                        <li class="d-flex gap-2 align-items-start mb-0"><span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span><span>Priority customer support</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Pricing-->
+        
+        <!-- ======= How it works =======-->
+        <section class="section howitworks__v1" id="how-it-works">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-md-6 text-center mx-auto"><span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">How it works</span>
+                <h2 data-aos="fade-up" data-aos-delay="100">How It Works</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Get started with Morsel in just a few simple steps. Set up your restaurant, start taking orders, and manage your daily operations with ease.</p>
+              </div>
+            </div>
+            <div class="row g-md-5">
+              <div class="col-md-6 col-lg-3">
+                <div class="step-card text-center h-100 d-flex flex-column justify-content-start position-relative" data-aos="fade-up" data-aos-delay="0">
+                  <div data-aos="fade-right" data-aos-delay="500"><img class="arch-line" src="assets/images/arch-line.svg" alt="morsel image placeholder"></div><span class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">1</span>
+                  <div>
+                    <h3 class="fs-5 mb-4">Create Your Account</h3>
+                    <p>Sign up and set up your restaurant details in minutes.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="step-card reverse text-center h-100 d-flex flex-column justify-content-start position-relative">
+                  <div data-aos="fade-right" data-aos-delay="1100"><img class="arch-line reverse" src="assets/images/arch-line-reverse.svg" alt="morsel image placeholder"></div><span class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">2</span>
+                  <h3 class="fs-5 mb-4">Set Up Your Menu</h3>
+                  <p>Add categories, menu items, prices, taxes, and other details.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1200">
+                <div class="step-card text-center h-100 d-flex flex-column justify-content-start position-relative">
+                  <div data-aos="fade-right" data-aos-delay="1700"><img class="arch-line" src="assets/images/arch-line.svg" alt="morsel image placeholder"></div><span class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">3</span>
+                  <h3 class="fs-5 mb-4">Connect Your Devices</h3>
+                  <p>Set up your Android device, printers, and other POS equipment.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1800">
+                <div class="step-card last text-center h-100 d-flex flex-column justify-content-start position-relative"><span class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">4</span>
+                  <div>
+                    <h3 class="fs-5 mb-4">Start Selling</h3>
+                    <p>Take orders, manage KOTs, process bills, and track your restaurant performance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End How it works-->
+        
+        <!-- ======= Stats =======-->
+        <section class="stats__v3 section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex flex-wrap content rounded-4" data-aos="fade-up" data-aos-delay="0">
+                  <div class="rounded-borders">
+                    <div class="rounded-border-1"></div>
+                    <div class="rounded-border-2"></div>
+                    <div class="rounded-border-3"></div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                      <h3 class="fs-1 fw-bold"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="2">0</span><span>K+</span></h3>
+                      <p class="mb-0">Customer Satisfaction</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                      <h3 class="fs-1 fw-bold"> <span class="purecounter" data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="2">0</span><span>%+</span></h3>
+                      <p class="mb-0">Revenue Increase</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                      <h3 class="fs-1 fw-bold"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2">0</span><span>x</span></h3>
+                      <p class="mb-0">Business Growth</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Stats-->
+        
+        <!-- ======= Services =======-->
+        <section class="section services__v3" id="services">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-md-8 mx-auto text-center"><span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">One POS. Every Kind of Restaurant.</span>
+                <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">Manage orders, billing, KOTs, tables, printers, and reports from one simple restaurant POS.</h2>
+              </div>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div><img class="img-fluid js-img-to-inline-svg" src="assets/images/food-court.png" alt="Platform 1" style="width: 52px;">
+                    <h3 class="fs-5 mb-3">Food Court</h3>
+                    <p class="mb-4">Keep multiple orders moving quickly with fast billing, clear KOTs, and efficient order management during busy hours.</p>
+                  </div><a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="https://play.google.com/store/apps/details?id=com.takinex.morsel"><span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"> </i></span><span>Try Now</span></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div><img class="img-fluid js-img-to-inline-svg" src="assets/images/cloud-kitchen.png" alt="Platform 1" style="width: 52px;">
+                    <h3 class="fs-5 mb-3">Cloud Kitchen</h3>
+                    <p class="mb-4">Manage incoming orders, KOTs, billing, and kitchen workflows efficiently without the need for dine-in table management.</p>
+                  </div><a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="https://play.google.com/store/apps/details?id=com.takinex.morsel"><span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"> </i></span><span>Try Now</span></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div><img class="img-fluid js-img-to-inline-svg" src="assets/images/bakery.png" alt="Platform 1" style="width: 52px;">
+                    <h3 class="fs-5 mb-3">Bakery</h3>
+                    <p class="mb-4">Manage products, quick billing, takeaway orders, and sales tracking while keeping your counter operations fast and organized.</p>
+                  </div><a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="https://play.google.com/store/apps/details?id=com.takinex.morsel"><span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"> </i></span><span>Try Now</span></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div><img class="img-fluid js-img-to-inline-svg" src="assets/images/cafe.png" alt="Platform 1" style="width: 52px;">
+                    <h3 class="fs-5 mb-3">Café</h3>
+                    <p class="mb-4">Handle dine-in, takeaway, table orders, billing, and KOTs with a simple POS designed for fast-paced café service.</p>
+                  </div><a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="https://play.google.com/store/apps/details?id=com.takinex.morsel"><span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"> </i></span><span>Try Now</span></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div><img class="img-fluid js-img-to-inline-svg" src="assets/images/pizza.png" alt="Platform 1" style="width: 52px;">
+                    <h3 class="fs-5 mb-3">Pizzeria</h3>
+                    <p class="mb-4">Manage custom orders, toppings, quantities, KOTs, billing, and takeaway or delivery orders with ease.</p>
+                  </div><a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="https://play.google.com/store/apps/details?id=com.takinex.morsel"><span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"> </i></span><span>Try Now</span></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div><img class="img-fluid js-img-to-inline-svg" src="assets/images/bar.png" alt="Platform 1" style="width: 52px;">
+                    <h3 class="fs-5 mb-3">Bar & Brewery</h3>
+                    <p class="mb-4">Manage orders, tables, billing, KOTs, and sales reports efficiently while keeping service fast during busy periods.</p>
+                  </div><a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="https://play.google.com/store/apps/details?id=com.takinex.morsel"><span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"> </i></span><span>Try Now</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Services-->
+        
+        <!-- ======= Testimonials =======-->
+        <section class="section testimonials__v2" id="testimonials">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-lg-5 mx-auto text-center"><span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Testimonials</span>
+                <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">Trusted by Restaurant Owners</h2>
+                <p data-aos="fade-up" data-aos-delay="200">See how restaurant owners use Morsel to simplify daily operations, speed up service, and manage their business with confidence.</p>
+              </div>
+            </div>
+            <div class="row g-4" data-masonry="{&quot;percentPosition&quot;: true }">
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial rounded-4 p-4">
+                  <blockquote class="mb-3">
+                     &ldquo;
+                    Morsel has made our billing and order management much faster. The interface is simple, and our staff learned it quickly.
+                    &rdquo;
+                  </blockquote>
+                  <div class="testimonial-author d-flex gap-3 align-items-center">
+                    <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg" alt="morsel image placeholder"></div>
+                    <div class="lh-base"><strong class="d-block">Arun Kumar</strong><span>Spice Route Restaurant</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial rounded-4 p-4">
+                  <blockquote class="mb-3">
+                     &ldquo;
+                   The KOT and printer management has made our kitchen workflow much smoother. We make fewer mistakes during busy hours.
+                    &rdquo;
+                  </blockquote>
+                  <div class="testimonial-author d-flex gap-3 align-items-center">
+                    <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-1-min.jpg" alt="morsel image placeholder"></div>
+                    <div class="lh-base"><strong class="d-block">Emily Smith</strong><span>Urban Bites Café</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial rounded-4 p-4">
+                  <blockquote class="mb-3">
+                     &ldquo;
+                   We especially love the offline functionality. Even when the internet goes down, we can continue taking orders and billing customers.
+                    &rdquo;
+                  </blockquote>
+                  <div class="testimonial-author d-flex gap-3 align-items-center">
+                    <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-5-min.jpg" alt="morsel image placeholder"></div>
+                    <div class="lh-base"><strong class="d-block">Michael Rodriguez</strong><span>The Food Junction</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial rounded-4 p-4">
+                  <blockquote class="mb-3">
+                     &ldquo;
+                    Morsel gives us everything we need in one place — tables, billing, KOTs, and sales reports. It has simplified our daily operations.
+                    &rdquo;
+                  </blockquote>
+                  <div class="testimonial-author d-flex gap-3 align-items-center">
+                    <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-3-min.jpg" alt="morsel image placeholder"></div>
+                    <div class="lh-base"><strong class="d-block">Sarah Lee</strong><span>Crust & Co. Pizzeria</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="testimonial rounded-4 p-4">
+                  <blockquote class="mb-3">
+                     &ldquo;
+                    Managing takeaway and delivery orders is much easier now. Morsel helps our team stay organized even during peak hours.
+                    &rdquo;
+                  </blockquote>
+                  <div class="testimonial-author d-flex gap-3 align-items-center">
+                    <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-7-min.jpg" alt="morsel image placeholder"></div>
+                    <div class="lh-base"><strong class="d-block">James Kim</strong><span>Fresh Oven Bakery</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="testimonial rounded-4 p-4">
+                  <blockquote class="mb-3">
+                     &ldquo;
+                    The reports give us a clear view of our sales and restaurant performance. Morsel is simple, reliable, and easy to manage.
+                    &rdquo;
+                  </blockquote>
+                  <div class="testimonial-author d-flex gap-3 align-items-center">
+                    <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-8-min.jpg" alt="morsel image placeholder"></div>
+                    <div class="lh-base"><strong class="d-block">Laura Brown</strong><span>The Green Leaf Bistro</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Testimonials-->
+        
+        <!-- ======= FAQ =======-->
+        <section class="section faq__v2" id="faq">
+          <div class="container">
+            <div class="row mb-4">
+              <div class="col-md-6 col-lg-7 mx-auto text-center"><span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">FAQ</span>
+                <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Frequently Asked Questions</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Have questions about Morsel? Find quick answers about setup, features, devices, offline usage, subscriptions, printers, and restaurant management.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-content">
+                  <div class="accordion custom-accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne"> What is Morsel? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse show" id="panelsStayOpen-collapseOne">
+                        <div class="accordion-body">Morsel is an all-in-one restaurant POS system that helps you manage billing, orders, KOTs, tables, printers, inventory, and sales reports from one platform.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo"> Which devices can I use with Morsel? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseTwo">
+                        <div class="accordion-body">Morsel is designed for Android phones and Android tablets, making it flexible for counters, tables, and mobile order-taking.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree"> Does Morsel work without an internet connection? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseThree">
+                        <div class="accordion-body">Yes. Morsel supports offline operations, allowing you to continue taking orders and billing even when the internet is unavailable.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour"> Can I connect multiple printers? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseFour">
+                        <div class="accordion-body">Yes. Morsel supports USB, Bluetooth, and network printers, allowing you to print bills and KOTs according to your restaurant setup.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive"> Can Morsel manage KOTs? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseFive">
+                        <div class="accordion-body">Yes. Morsel provides Kitchen Order Ticket (KOT) management to help your kitchen team receive and process orders efficiently.</div>
+                      </div>
+                    </div>
+					
+					
+					 <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive"> Can I manage dine-in, takeaway, and delivery orders? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseFive">
+                        <div class="accordion-body">Yes. Morsel allows you to manage dine-in, takeaway, and delivery orders within the same POS system.</div>
+                      </div>
+                    </div>
+					
+					 <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive"> Does Morsel support table management? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseFive">
+                        <div class="accordion-body">Yes. You can manage restaurant tables, track table status, and handle dine-in orders directly from the POS.</div>
+                      </div>
+                    </div>
+					
+					 <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive"> Can I view sales and business reports? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseFive">
+                        <div class="accordion-body">Yes. Morsel provides sales and performance reports to help you understand orders, revenue, payments, and restaurant activity.</div>
+                      </div>
+                    </div>
+					
+					 <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive"> Does Morsel provide cloud backup? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseFive">
+                        <div class="accordion-body">Yes. Morsel supports cloud backup to help keep your important restaurant data backed up and protected.</div>
+                      </div>
+                    </div>
+					
+					 <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive"> Can I change or cancel my subscription? </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="panelsStayOpen-collapseFive">
+                        <div class="accordion-body">Yes. You can manage your subscription according to the available monthly and yearly plans. The yearly plan offers 35% savings compared with monthly billing.</div>
+                      </div>
+                    </div>
+					
+					
+					
+					
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End FAQ-->
+        </section>
+        <!-- End FAQ-->
+        
+       
+        
+        <!-- ======= Footer =======-->
+        <footer class="footer pt-5 pb-5">
+          <div class="container">
+           
+            <div class="row justify-content-between mb-5 g-xl-5">
+              <div class="col-md-4 mb-5 mb-lg-0">
+                <h3 class="mb-3">Morsel POS  - Simple. Powerful. Made for Restaurants.</h3>
+                <p class="mb-4">Take control of your restaurant with Morsel. Set up your POS, manage your daily operations, and serve your customers faster — all from one simple system.</p>
+              </div>
+              <div class="col-md-7">
+                <div class="row g-2">
+				  <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="mb-3">Quick Links</h3>
+                    <ul class="list-unstyled">
+					<li><a href="https://play.google.com/store/apps/details?id=com.takinex.morsel">Download POS <span class="badge ms-1">Android</span></a></li>
+                      <li><a href="#pricing">Pricing</a></li>
+                      <li><a href="#how-it-works">How It Works</a></li>
+                      <li><a href="#services">Restaurant Types</a></li>
+                    
+                    </ul>
+                  </div>
+                  <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="mb-3">Legal</h3>
+                    <ul class="list-unstyled">
+                      <li><a href="terms-of-service.html">Terms &amp; Conditions</a></li>
+                      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                     
+                    </ul>
+                  </div>
+                
+                  <div class="col-md-6 col-lg-4 mb-4 mb-lg-0 quick-contact">
+                    <h3 class="mb-3">Contact</h3>
+                    </span></p><a class="d-flex mb-3" href="mailto:contact.takinex@gmail.com"><i class="bi bi-envelope-fill me-3"></i><span>contact.takinex@gmail.com</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row credits pt-3">
+              <div class="col-xl-8 text-center text-xl-start mb-3 mb-xl-0">
+              
+                &copy;
+                <script>document.write(new Date().getFullYear());</script> Morsel. 
+                 All rights reserved.
+              </div>
+              <div class="col-xl-4 justify-content-start justify-content-xl-end quick-links d-flex flex-column flex-xl-row text-center text-xl-start gap-1">Powered by<a href="https://takinex.com" target="_blank">Takinex</a></div>
+            </div>
+          </div>
+        </footer>
+        <!-- End Footer-->
+        
+      </main>
+    </div>
+    
+    <!-- ======= Back to Top =======-->
+    <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
+    <!-- End Back to top-->
+    
+    <!-- ======= Javascripts =======-->
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/gsap/gsap.min.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/vendors/glightbox/glightbox.min.js"></script>
+    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendors/aos/aos.js"></script>
+    <script src="assets/vendors/purecounter/purecounter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/send_email.js"></script>
+    <!-- End JavaScripts-->
+  </body>
+</html>
